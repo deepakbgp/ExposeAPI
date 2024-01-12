@@ -17,4 +17,10 @@ public class UserService {
 	public Optional<UserDetails> getUserDetailsById(Long userId){
 		return userRepository.findById(userId);
 	}
+
+	public UserDetails saveUser(UserDetails user) {
+		return userRepository.save(user);
+	}
+	
+	
 }
